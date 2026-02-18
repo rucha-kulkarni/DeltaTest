@@ -131,10 +131,20 @@ db.json
 
 > JSON Server automatically supports new fields without backend changes.
 
-### Deployment
+## Deployment
 
 > Note: The application UI is deployed on Netlify.
 The backend API is mocked using JSON Server and runs locally, as allowed in the assignment.
+
+
+## Production Behavior
+
+This project uses JSON Server for local development only.
+
+When deployed to Netlify:
+- The backend is not available
+- The application runs in frontend-only mode
+- User list is shown as empty
 
 ---
 

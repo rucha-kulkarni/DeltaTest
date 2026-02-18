@@ -1,6 +1,11 @@
 const BASE_URL = `${import.meta.env.VITE_API_BASE_URL}/users`;
+const IS_PROD = import.meta.env.PROD;
 
 export const getUsers = async () => {
+  if (IS_PROD) {
+    return []; // no backend in production
+  }
+
   const res = await fetch(BASE_URL);
   if (!res.ok) throw new Error("Failed to fetch users");
   return res.json();
